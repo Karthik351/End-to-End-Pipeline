@@ -114,7 +114,7 @@ pipeline {
         steps {
             script {
                 sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 619071349649.dkr.ecr.us-east-1.amazonaws.com'
-                sh 'docker tag end-end-repo:latest 619071349649.dkr.ecr.us-east-1.amazonaws.com/end-end-repo:latest'
+                sh 'docker tag springbootapp:latest 619071349649.dkr.ecr.us-east-1.amazonaws.com/end-end-repo:latest'
                 sh 'docker push 619071349649.dkr.ecr.us-east-1.amazonaws.com/end-end-repo:latest'
             }
         }
