@@ -110,15 +110,15 @@ pipeline {
                 }
             }
 
-//             stage ('Push Docker Image to AWS ECR') {
-//         steps {
-//             script {
-//                 sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 058264323019.dkr.ecr.us-east-1.amazonaws.com'
-//                 sh 'docker tag springbootapp:latest 058264323019.dkr.ecr.us-east-1.amazonaws.com/myrepo:latest'
-//                 sh 'docker push 058264323019.dkr.ecr.us-east-1.amazonaws.com/myrepo:latest'
-//             }
-//         }
-//     }
+            stage ('Push Docker Image to AWS ECR') {
+        steps {
+            script {
+                sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 619071349649.dkr.ecr.us-east-1.amazonaws.com'
+                sh 'docker tag end-end-repo:latest 619071349649.dkr.ecr.us-east-1.amazonaws.com/end-end-repo:latest'
+                sh 'docker push 619071349649.dkr.ecr.us-east-1.amazonaws.com/end-end-repo:latest'
+            }
+        }
+    }
 //     stage('Deploy To Kubernetes') {
 //         steps {
 //         withKubeConfig(caCertificate: '', clusterName: 'eks2', contextName: '', credentialsId: 'k8-cred', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: 'https://A7C7808EC02839C9FBA67DFE109DBC33.gr7.us-east-1.eks.amazonaws.com')
