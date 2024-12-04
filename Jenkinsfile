@@ -103,8 +103,8 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                        sh "docker image tag springbootapp:latest Karthik351/springbootapp:latest"
-                        sh "docker push Karthik351/springbootapp:latest"
+                        sh "docker image tag springbootapp:latest karthik351/springbootapp:latest"
+                        sh "docker push karthik351/springbootapp:latest"
 
                     }
                 }
