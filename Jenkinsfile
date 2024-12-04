@@ -47,13 +47,13 @@ pipeline {
                }
             }
         } 
-//         stage('Quality Gate') {
-//             steps {
-//               timeout(time: 1, unit: 'MINUTES') {
-//                waitForQualityGate abortPipeline: true, credentialsId: 'sonar'  
-//           }
-//         } 
-//       }
+        stage('Quality Gate') {
+            steps {
+              timeout(time: 1, unit: 'MINUTES') {
+               waitForQualityGate abortPipeline: true, credentialsId: 'sonar-scanner'  
+          }
+        } 
+      }
 //        stage('Maven Package') {
 //             steps {
 //                echo 'Maven package Started'
