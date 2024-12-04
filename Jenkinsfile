@@ -54,12 +54,12 @@ pipeline {
           }
         } 
       }
-//        stage('Maven Package') {
-//             steps {
-//                echo 'Maven package Started'
-//                sh 'mvn package'
-//           }
-//         } 
+       stage('Maven Package') {
+            steps {
+               echo 'Maven package Started'
+               sh 'mvn package'
+          }
+        } 
 //         stage("Jar Publish") {
 //             steps {
 //                 script {
