@@ -100,15 +100,15 @@ pipeline {
                 sh 'trivy image --format table --scanners vuln -o trivy-image-report.html springbootapp:latest'
             }
         }
-//         stage('Push Docker Image') {
-//             steps {
-//                 script {
-//                         sh "docker image tag springbootapp:latest bkrrajmali/springbootapp:latest"
-//                         sh "docker push bkrrajmali/springbootapp:latest"
+        stage('Push Docker Image') {
+            steps {
+                script {
+                        sh "docker image tag springbootapp:latest Karthik351/springbootapp:latest"
+                        sh "docker push Karthik351/springbootapp:latest"
 
-//                     }
-//                 }
-//             }
+                    }
+                }
+            }
 
 //             stage ('Push Docker Image to AWS ECR') {
 //         steps {
