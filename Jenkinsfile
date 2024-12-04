@@ -85,16 +85,16 @@ pipeline {
                 }
             }   
         } 
-//         stage('Build Docker Image and TAG') {
-//             steps {
-//                 script {
-//                     // Build the Docker image using the renamed JAR file
-//                     script {
-//                             sh 'docker build -t springbootapp:latest .'
-//                         }
-//                 }   
-//             }
-//         }
+        stage('Build Docker Image and TAG') {
+            steps {
+                script {
+                    // Build the Docker image using the renamed JAR file
+                    script {
+                            sh 'docker build -t springbootapp:latest .'
+                        }
+                }   
+            }
+        }
 //         stage('Docker Image Scan') {
 //             steps {
 //                 sh 'trivy image --format table --scanners vuln -o trivy-image-report.html springbootapp:latest'
