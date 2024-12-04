@@ -121,7 +121,7 @@ pipeline {
     }
     stage('Deploy To Kubernetes') {
         steps {
-        withKubeConfig(caCertificate: '', clusterName: 'my-eks', contextName: '', credentialsId: 'kube-cred', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: ' https://11E5DE0AEDC9A755D2C1F4F60140F16F.gr7.us-east-1.eks.amazonaws.com')
+        withKubeConfig(caCertificate: '', clusterName: 'my-eks', contextName: '', credentialsId: 'kube-cred', namespace: 'default', restrictKubeConfigAccess: false, serverUrl: 'https://11E5DE0AEDC9A755D2C1F4F60140F16F.gr7.us-east-1.eks.amazonaws.com')
          {
             sh "kubectl apply -f eks-deploy-k8s.yaml"
             }
