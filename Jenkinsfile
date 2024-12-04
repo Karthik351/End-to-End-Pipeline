@@ -27,12 +27,12 @@ pipeline {
                sh 'mvn compile'
             }
         } 
-//          stage('Maven Test') {
-//             steps {
-//                echo 'Maven Test Started'
-//                sh 'mvn test'
-//             }
-//         } 
+         stage('Maven Test') {
+            steps {
+               echo 'Maven Test Started'
+               sh 'mvn test'
+            }
+        } 
 //         stage('File System Scan by Trivy') {
 //             steps {
 //                echo 'Trivy Scan Started'
