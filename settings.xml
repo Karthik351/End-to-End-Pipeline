@@ -1,0 +1,9 @@
+<settings>
+    <servers>
+        <server>
+            <id>maven3</id> <!-- This ID must match the one in your pom.xml -->
+            <username>nexusadmin</username>
+            <password>nexus123</password>
+        </server>
+    </servers>
+</settings>
