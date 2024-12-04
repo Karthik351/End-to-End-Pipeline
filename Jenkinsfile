@@ -39,14 +39,14 @@ pipeline {
                sh 'trivy fs --format table --output trivy-fs-output.txt .'
             }
         } 
-//         stage('Sonar Analysis') {
-//             steps {
-//                withSonarQubeEnv('sonar') {
-//                 sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=SpringBoot -Dsonar.projectKey=SpringBoot \
-//                                                        -Dsonar.java.binaries=. -Dsonar.exclusions=**/trivy-fs-output.txt '''
-//                }
-//             }
-//         } 
+        stage('Sonar Analysis') {
+            steps {
+               withSonarQubeEnv('sonar-scanner') {
+                sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=SpringBootApp -Dsonar.projectKey=SpringBoot \
+                                                       -Dsonar.java.binaries=. -Dsonar.exclusions=**/trivy-fs-output.txt '''
+               }
+            }
+        } 
 //         stage('Quality Gate') {
 //             steps {
 //               timeout(time: 1, unit: 'MINUTES') {
