@@ -14,13 +14,13 @@ pipeline {
                 git branch: 'main' , url: 'https://github.com/Karthik351/End-to-End-Pipeline.git'
             }
         }
-//          stage('Versioning') {
-//     steps {
-//         script {
-//             sh 'mvn versions:set -DnewVersion=1.0.${BUILD_NUMBER}'
-//         }
-//     }
-// }
+         stage('Versioning') {
+    steps {
+        script {
+            sh 'mvn versions:set -DnewVersion=1.0.${BUILD_NUMBER}'
+        }
+    }
+}
 //         stage('Maven Compile') {
 //             steps {
 //                echo 'Maven Compile Started'
