@@ -21,12 +21,12 @@ pipeline {
         }
     }
 }
-//         stage('Maven Compile') {
-//             steps {
-//                echo 'Maven Compile Started'
-//                sh 'mvn compile'
-//             }
-//         } 
+        stage('Maven Compile') {
+            steps {
+               echo 'Maven Compile Started'
+               sh 'mvn compile'
+            }
+        } 
 //          stage('Maven Test') {
 //             steps {
 //                echo 'Maven Test Started'
